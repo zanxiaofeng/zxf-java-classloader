@@ -9,24 +9,9 @@
     <version>0.0.1</version>
 
     <modules>
-        <module>same-class</module>
-        <module>same-class-a</module>
-        <module>same-class-b</module>
-        <module>test-classloader</module>
+        <module>framework-jar</module>
+        <module>user-jar</module>
+        <module>depends-jar-v1</module>
+        <module>depends-jar-v2</module>
     </modules>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
