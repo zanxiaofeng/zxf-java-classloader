@@ -6,12 +6,12 @@
     <groupId>zxf</groupId>
     <artifactId>zxf-java-classloader</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
 
     <modules>
         <module>framework-jar</module>
-        <module>user-jar</module>
-        <module>depends-jar-v1</module>
-        <module>depends-jar-v2</module>
+        <module>user-normal-jar</module>
+        <module>user-shade-jar</module>
+        <module>depends-jar</module>
     </modules>
 </project>

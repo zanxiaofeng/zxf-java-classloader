@@ -10,7 +10,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>framework-jar</artifactId>
+    <artifactId>user-shade-jar</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -45,24 +45,13 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.5.5</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>zxf.framework.FrameworkStart</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                </configuration>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.4.1</version>
                 <executions>
                     <execution>
-                        <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>single</goal>
+                            <goal>shade</goal>
                         </goals>
                     </execution>
                 </executions>

@@ -10,7 +10,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>framework-jar</artifactId>
+    <artifactId>user-normal-jar</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -48,11 +48,6 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>2.5.5</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>zxf.framework.FrameworkStart</mainClass>
-                        </manifest>
-                    </archive>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
