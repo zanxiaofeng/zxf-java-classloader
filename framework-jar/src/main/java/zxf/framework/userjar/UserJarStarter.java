@@ -1,5 +1,6 @@
 package zxf.framework.userjar;
 
+import com.google.common.base.Preconditions;
 import lombok.extern.slf4j.Slf4j;
 import zxf.framework.classloader.ChildFirstClassLoader;
 import zxf.framework.classloader.ParentFirstClassLoader;
@@ -12,6 +13,7 @@ import java.nio.file.Paths;
 public class UserJarStarter {
     public static void start(String userJar, String startClass, Boolean parentFirst, String message) throws Exception {
         log.info("::start, userJar={}, startClass={}, parentFirst={}, message={}", userJar, startClass, parentFirst, message);
+        Preconditions.checkArgument(userJar != null, "%s can not be null", "userJar");
         URL[] appJarUrls = new URL[]{
                 new URL("file:" + Paths.get("./libraries", userJar).toAbsolutePath())
         };
