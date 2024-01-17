@@ -25,9 +25,11 @@
 
 
 # How to get classloader
-- Class::getClassLoader()
-- System.getSystemClassloader()
-- Thread::getContextClassLoader()
+- Class::getClassLoader()[jvm provided]
+- ClassLoader.getSystemClassloader()[jvm provided]
+- ClassLoader.getPlatformClassLoader()[jvm provided, after jdk9]
+- Thread::getContextClassLoader()[jvm provided]
+- Customized Classloader[user customized]
 
 # How to load a class
 - ClassLoader::loadClass(String name)

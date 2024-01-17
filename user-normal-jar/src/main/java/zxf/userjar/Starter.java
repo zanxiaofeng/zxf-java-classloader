@@ -14,16 +14,13 @@ public class Starter {
     public static List<String> messages = new ArrayList<>();
 
     public static Boolean start(String message) {
-        log.error("::start BEGIN {}, classloader={}, Common.message={}", message, Starter.class.getClassLoader(), Common.message);
+        log.info("::start BEGIN {}, classloader={}, Common.message={}", message, Starter.class.getClassLoader(), Common.message);
         // Guava 19.0 do not support this method
-        Preconditions.checkArgument(message!=null, "Argument at %s can not be null", 1);
+        log.info("::start Preconditions.class.getClassLoader={}", Preconditions.class.getClassLoader());
+        Preconditions.checkArgument(message != null, "Argument at %s can not be null", 1);
         messages.add(message);
-        log.error("::start END {} ,Common.message={}", messages, Common.message);
+        log.info("::start END {} ,Common.message={}", messages, Common.message);
         return true;
-    }
-
-    public static void main(String[] args) {
-        start(null);
     }
 
     static {
